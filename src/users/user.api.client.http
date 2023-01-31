@@ -1,9 +1,31 @@
-### Create a new user
+### Variables
+@base_url = http://localhost:3000/users
 
-POST http://localhost:3000/auth/signup
+###
+
+# ### Create a new user
+# POST {{base_url}}/users
+# Content-Type: application/json
+
+# {
+# 	"email": "alaskamoulero@gmail.com",
+# 	"password": "12345678" 
+# }
+
+### Get a user by id
+@user_id = 4
+GET {{base_url}}/{{user_id}}
+
+### Get user with a particular email
+GET {{base_url}}?email=chegunmoulero@gmail.com
+
+### Delete a user by id
+DELETE {{base_url}}/{{user_id}}
+
+### Update a user by id
+PATCH {{base_url}}/{{user_id}}
 Content-Type: application/json
 
 {
-	"email": "chegunmoulero@gmail.com",
-	"password": "12345678" 
+	"password": "1234"
 }
