@@ -1,0 +1,22 @@
+### Variables
+@base_url = http://localhost:3000
+
+###
+
+### Signup a new user
+POST {{base_url}}/auth/signup
+Content-Type: application/json
+
+{
+	"email": "alaskamoulero@gmail.com",
+	"password": "12345678"
+}
+
+### Signin a new user
+POST {{base_url}}/auth/signin
+Content-Type: application/json
+
+{
+	"email": "alaskamoulero@gmail.com",
+	"password": "12345678"
+}
