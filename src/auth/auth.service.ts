@@ -54,4 +54,8 @@ export class AuthService {
     // return user
     return user;
   }
+
+  async authUser(id: number) {
+    return this.userService.findOne(id);
+  }
 }

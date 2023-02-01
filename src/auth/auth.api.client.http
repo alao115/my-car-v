@@ -1,10 +1,10 @@
 ### Variables
-@base_url = http://localhost:3000
+@base_url = http://localhost:3000/auth
 
 ###
 
 ### Signup a new user
-POST {{base_url}}/auth/signup
+POST {{base_url}}/sig
 Content-Type: application/json
 
 {
@@ -13,10 +13,13 @@ Content-Type: application/json
 }
 
 ### Signin a new user
-POST {{base_url}}/auth/signin
+POST {{base_url}}/signin
 Content-Type: application/json
 
 {
 	"email": "alaskamoulero@gmail.com",
 	"password": "12345678"
 }
+
+### Get logged in user
+GET {{base_url}}/authUser
